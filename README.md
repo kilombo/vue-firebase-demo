@@ -1,6 +1,7 @@
-# vuejs-product-app
+# vue-firebase-demo
 
 > A Vue.js simple product app with firestore
+> Based on https://github.com/waseembarcha/vuejs-crud
 
 ## Build Setup
 
