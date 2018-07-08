@@ -1,8 +1,8 @@
 {
-  "name": "vuejs-product-app",
+  "name": "vue-firebase-demo",
   "version": "1.0.0",
   "description": "A Vue.js simple product app with firestore",
-  "author": "waseembarcha <waseembarcha1993@gmail.com>",
+  "author": "kilombo <enrique.eqg@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
