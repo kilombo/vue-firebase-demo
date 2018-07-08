@@ -116,12 +116,14 @@ export default {
       productData: {
         id: '',
         product_id: '',
+        product_uid: '',
         product_name: '',
         product_price: ''
       },
       editProductData: {
         id: '',
         product_id: '',
+        product_uid: '',
         product_name: '',
         product_price: ''
       },
@@ -133,11 +135,13 @@ export default {
       if (user) {
         // User is signed in.
         this.user = user
+        this.productData.product_uid = user.uid
         console.log(user);
         this.getProducts()
       } else {
         // No user is signed in.
         this.user = null
+        this.productData.product_uid = ''
         this.$router.replace('login')
       }
     })
@@ -154,8 +158,7 @@ export default {
       db
         .collection('products')
         .where('product_uid', '==', this.user.uid)
-        .get()
-        .then(querySnapshot => {
+        .onSnapshot(querySnapshot => {
           const products = []
           // querySnapshot.forEach((doc)=>{
           //   products.push(doc.data())

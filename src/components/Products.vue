@@ -152,7 +152,8 @@ export default {
   },
   methods: {
     getProducts() {
-      db.collection('products').onSnapshot(querySnapshot => {
+      db.collection('products')
+      .onSnapshot(querySnapshot => {
         const products = []
 
         const productsArray = []
