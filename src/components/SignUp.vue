@@ -1,9 +1,9 @@
 <template>
   <div class="sign-up">
     <p>Let's create a new account !</p>
-    <input type="text" v-model="email" placeholder="Email"><br>
-    <input type="password" v-model="password" placeholder="Password"><br>
-    <button v-on:click="signUp">Sign Up</button>
+    <input class="form-control" type="text" v-model="email" placeholder="Email"><br>
+    <input class="form-control" type="password" v-model="password" placeholder="Password"><br>
+    <button v-on:click="signUp" class="btn btn-primary">Sign Up</button>
     <span>or go back to <router-link to="/login">login</router-link>.</span>
   </div>
 </template>
@@ -44,22 +44,10 @@
 </script>
 
 <style scoped>
-  .signUp {
+  .sign-up {
     margin-top: 40px;
   }
-  input {
-    margin: 10px 0;
-    width: 20%;
-    padding: 15px;
-  }
-  button {
-    margin-top: 10px;
-    width: 10%;
-    cursor: pointer;
-  }
-  span {
-    display: block;
-    margin-top: 20px;
-    font-size: 11px;
+  span{
+    font-size: 13px;
   }
 </style>

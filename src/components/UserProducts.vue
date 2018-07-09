@@ -160,9 +160,6 @@ export default {
         .where('product_uid', '==', this.user.uid)
         .onSnapshot(querySnapshot => {
           const products = []
-          // querySnapshot.forEach((doc)=>{
-          //   products.push(doc.data())
-          // })
           const productsArray = []
           let i = 0
           querySnapshot.forEach(doc => {
@@ -171,13 +168,10 @@ export default {
             products.push(productsArray[i])
             i++
           })
-          // for(let key in querySnapshot.docs){
-          //   productsArray.push(querySnapshot.docs[key].data())
-          //   productsArray[key].id = querySnapshot.docs[key].id
-          //   products.push(productsArray[key])
-          // }
           this.products = products
-        })
+        }, (error) => {
+        //console.log(error);
+      })
     },
     onSubmit() {
       db
@@ -188,13 +182,6 @@ export default {
       this.productData.product_name = ''
       this.productData.product_price = ''
     },
-    // onDelete(product_id){
-    //   db.collection('products').where('product_id', '==', product_id).get().then(querySnapshot =>{
-    //     querySnapshot.forEach(doc=>{
-    //       doc.ref.delete().then(this.getProducts)
-    //     })
-    //   })
-    // }
     onDelete(id) {
       db
         .collection('products')

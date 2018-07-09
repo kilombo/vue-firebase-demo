@@ -1,9 +1,9 @@
 <template>
-  <div class="login">
+  <div class="login col-xs-12 col-md-6">
     <h3>Login</h3>
-    <input type="text" v-model="email" placeholder="Email"><br>
-    <input type="password" v-model="password" placeholder="Password"><br>
-    <button v-on:click="signIn">Connection</button>
+    <input class="form-control" type="text" v-model="email" placeholder="Email"><br>
+    <input class="form-control" type="password" v-model="password" placeholder="Password"><br>
+    <button v-on:click="signIn" class="btn btn-primary">Connection</button>
     <p>You don't have an account ? You can
       <router-link to="/sign-up">create one</router-link>
     </p>
@@ -53,16 +53,7 @@ export default {
 .login {
   margin-top: 40px;
 }
-input {
-  margin: 10px 0;
-  width: 20%;
-  padding: 15px;
-}
-button {
-  margin-top: 20px;
-  width: 10%;
-  cursor: pointer;
-}
+
 p {
   margin-top: 40px;
   font-size: 13px;

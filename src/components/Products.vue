@@ -166,6 +166,8 @@ export default {
         })
 
         this.products = products
+      }, (error) => {
+        //console.log(error);
       })
       // db
       //   .collection('products')
@@ -201,13 +203,6 @@ export default {
       this.productData.product_name = ''
       this.productData.product_price = ''
     },
-    // onDelete(product_id){
-    //   db.collection('products').where('product_id', '==', product_id).get().then(querySnapshot =>{
-    //     querySnapshot.forEach(doc=>{
-    //       doc.ref.delete().then(this.getProducts)
-    //     })
-    //   })
-    // }
     onDelete(id) {
       db
         .collection('products')
