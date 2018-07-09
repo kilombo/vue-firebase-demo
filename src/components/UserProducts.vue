@@ -207,6 +207,7 @@ export default {
     onEdit(product) {
       this.editId = product.id
       this.editProductData.product_id = product.product_id
+      this.editProductData.product_uid = this.user.uid
       this.editProductData.product_name = product.product_name
       this.editProductData.product_price = product.product_price
     },
