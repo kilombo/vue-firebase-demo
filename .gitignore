@@ -13,3 +13,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 src/db/index.js
+
+# VSCode Historial
+/.history
